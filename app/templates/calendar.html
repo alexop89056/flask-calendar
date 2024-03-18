@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Calendar</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}"/>
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='assets/css/plugins.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLE -->
+    <link href="{{ url_for('static', filename='assets/css/fullcalendar.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ url_for('static', filename='assets/css/custom-fullcalendar.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='assets/css/modal.css') }}" rel="stylesheet" type="text/css">
+
+    <link href="{{ url_for('static', filename='assets/css/custom-fullcalendar-dark.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='assets/css/stats.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL STYLE -->
+
+</head>
+<body class="dark layout-boxed">
+
+<div class="faq container">
+
+                    <div class="faq-layouting layout-spacing">
+
+<div class="kb-widget-section">
+
+    <div class="row justify-content-center">
+
+        <div class="col-xxl-2 col-xl-3 col-lg-3 mb-lg-0 col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg>
+                    </div>
+                    <h5 class="card-title mb-0"><span class="statValue">10</span> <span class="statTitle">Disabled</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-3 mb-lg-0 col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <h5 class="card-title mb-0"><span class="statValue">10</span> <span class="statTitle">Disabled</span> </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-3 mb-lg-0 col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h5 class="card-title mb-0"><span class="statValue">10</span> <span class="statTitle">Disabled</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-3 mb-lg-0 col-md-6 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h5 class="card-title mb-0"><span class="statValue">10</span> <span class="statTitle">Disabled</span></h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div></div>
+</div>
+
+    <div class="container alertBlock">
+        <span>In this month, <span id="adValue">0</span> advertising posts are occupied.</span>
+    </div>
+
+
+
+
+    <div class="row layout-top-spacing layout-spacing" id="cancel-row">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+            <div class="calendar-container">
+                <div class="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+    {% if user %}
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal window</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="">
+                                <label class="form-label">Enter the title</label>
+                                <input id="event-title" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12" id="event-start-date-block">
+                            <div class="">
+                                <label class="form-label">Enter the start date</label>
+                                <input id="event-start-date" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12" id="event-end-date-block">
+                            <div class="">
+                                <label class="form-label">Enter the end date</label>
+                                <input id="event-end-date" type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+
+                            <div class="d-flex mt-4">
+                                <div class="n-chk">
+                                    <div class="form-check form-check-primary form-check-inline">
+                                        <input class="form-check-input" type="radio" name="event-level" value="Free" id="free">
+                                        <label class="form-check-label" for="free">Free</label>
+                                    </div>
+                                </div>
+                                <div class="n-chk">
+                                    <div class="form-check form-check-warning form-check-inline">
+                                        <input class="form-check-input" type="radio" name="event-level" value="Busy" id="busy">
+                                        <label class="form-check-label" for="busy">Busy</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success btn-update-event" data-fc-event-public-id="">Save Changes</button>
+                    <button type="button" class="btn btn-primary btn-add-event">Add Event</button>
+                    <button type="button" class="btn btn-danger btn-remove-event" data-fc-event-public-id="">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade" id="editStatModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Modal Window</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="{{ url_for('calendar.update_stat') }}" method="POST">
+                    <div class="modal-body">
+                        <input type="hidden" id="statId" name="statId">
+                        <div class="mb-2">
+                            <label class="form-label" for="stat1">Title</label>
+                            <input class="form-control" type="text" value="" id="stat1" name="stat1">
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label" for="stat2">Value</label>
+                            <input class="form-control" type="text" value="" id="stat2" name="stat2">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+
+
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/waves.min.js') }}"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{{ url_for('static', filename='assets/js/fullcalendar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/uuid4.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+    <script>
+        {% for stat in stats %}
+         $('.card').eq({{ loop.index0 }}).find('.statTitle').text('{{ stat.title }}');
+         $('.card').eq({{ loop.index0 }}).find('.statValue').text('{{ stat.value }}');
+         $('.card').eq({{ loop.index0 }}).data("statId", {{ stat.id }});
+         {% endfor %}
+    </script>
+    {% if user %}
+    <script src="{{ url_for('static', filename='assets/js/custom-fullcalendar.js') }}"></script>
+
+    <script>
+        $('.card').click(function (){
+            var editModal = new bootstrap.Modal(document.getElementById('editStatModal'))
+            var statId = $(this).data("statId");
+            $('#statId').val(statId);
+            $('#stat1').val($(this).find('.statTitle').text());
+            $('#stat2').val($(this).find('.statValue').text());
+            editModal.show();
+        })
+
+        $('.updateStat').click(function (){
+            var statId = $('#statId').val();
+            var statTitle = $('#stat1').val();
+            var statValue = $('#stat2').val();
+
+            $.ajax({
+                type: "POST",
+                url: "/stat/update",
+                data: {
+                    statId: statId,
+                    statTitle: statTitle,
+                    statValue: statValue
+                }
+            }).done(function (){
+                alert("Stats updated");
+            })
+        })
+
+    </script>
+    {% else %}
+    <script src="{{ url_for('static', filename='assets/js/custom-fullcalendar-guest.js') }}"></script>
+    {% endif %}
+    <!--  END CUSTOM SCRIPTS FILE  -->
+
+
+
+<style>
+
+
+</style>
+</body>
+</html>
