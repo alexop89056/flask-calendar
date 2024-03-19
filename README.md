@@ -18,6 +18,16 @@ This repository contains a website built using Flask and JavaScript that allows 
 - **RESTful API**
 - **Sqlite3**
 
+## Usage
+- Start Project with deployment server:
+
+   ```bash
+   python run.py
+- Start Project with gunicorn server:
+
+   ```bash
+   gunicorn app:app
+
 ## License
 This project is licensed under the MIT License - see the [main page](https://mit-license.org/) for the details.
   
