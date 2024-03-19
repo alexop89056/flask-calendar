@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 sqlalchemy-utils
 Flask-Bcrypt
 Flask-Session
+gunicorn
