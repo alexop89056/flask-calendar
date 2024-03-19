@@ -40,7 +40,7 @@ To install the project, follow these steps:
 
    ```bash
    python run.py
-- Start Project with gunicorn server:
+- Start Project with gunicorn server (Windows unsupported):
 
    ```bash
    gunicorn app:app
