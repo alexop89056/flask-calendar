@@ -18,6 +18,23 @@ This repository contains a website built using Flask and JavaScript that allows 
 - **RESTful API**
 - **Sqlite3**
 
+## Installation
+
+To install the project, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/alexop89056/flask-calendar.git
+2. Navigate to the project directory:
+ 
+    ```bash
+    cd flask-calendar
+3. Install dependencies:
+ 
+    ```bash
+    pip install -r requirements.txt
+
 ## Usage
 - Start Project with deployment server:
 
