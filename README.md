@@ -36,11 +36,11 @@ To install the project, follow these steps:
     pip install -r requirements.txt
 
 ## Usage
-- Start Project with deployment server:
+- Start Project with a deployment server:
 
    ```bash
    python run.py
-- Start Project with gunicorn server (Windows unsupported):
+- Start Project with a gunicorn server (Windows unsupported):
 
    ```bash
    gunicorn app:app
